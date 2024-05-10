@@ -21,7 +21,6 @@ export class UsersService {
     return this.userRepo.find();
   }
 
-
   remove(id: number) {
     return this.userRepo.delete(id);
   }
