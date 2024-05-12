@@ -16,9 +16,10 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
-  @Get()
+  @Get('search')
   findOneByEmailAndPassword(@Body() body: { email: string, password: string }) {
-    return this.usersService.findOneByEmailAndPassword(body.email, body.password)
+    const { email, password } = body;
+    return this.usersService.findOneByEmailAndPassword(email, password);
   }
 
   @Delete(':id')

@@ -14,10 +14,20 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/users 
+GET http://localhost:3000/users/search 
 Content-Type: application/json
 
 {
   "email" : "testing@gmail.com",
-  "password" : "123"
+  "password" : "1223"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "john"
 }
