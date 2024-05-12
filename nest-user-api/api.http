@@ -11,3 +11,13 @@ Content-Type: application/json
   "age": 20,
   "password" : "123"
 }
+
+###
+
+GET http://localhost:3000/users 
+Content-Type: application/json
+
+{
+  "email" : "testing@gmail.com",
+  "password" : "123"
+}

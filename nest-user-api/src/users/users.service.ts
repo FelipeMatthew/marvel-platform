@@ -17,6 +17,11 @@ export class UsersService {
     return this.userRepo.save(user)
   }
 
+  async findOneByEmailAndPassword(email: string, password: string) {
+    const user = await this.userRepo.findOne({ where: { email, password } });
+    return user;
+  }
+
   findAll() {
     return this.userRepo.find();
   }

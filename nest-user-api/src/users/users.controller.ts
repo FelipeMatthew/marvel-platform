@@ -16,6 +16,11 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
+  @Get()
+  findOneByEmailAndPassword(@Body() body: { email: string, password: string }) {
+    return this.usersService.findOneByEmailAndPassword(body.email, body.password)
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.usersService.remove(+id);
