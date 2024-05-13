@@ -1,10 +1,16 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import { BrowserRouter } from 'react-router-dom'
+import AppRouter from './routes.tsx'
+import { ThemeProvider } from 'styled-components'
+import { marvelTheme } from './theme/index.ts'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+    <ThemeProvider theme={marvelTheme()} />
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  </StrictMode>,
 )

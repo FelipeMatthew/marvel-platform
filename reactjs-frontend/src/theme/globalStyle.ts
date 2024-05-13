@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyles = createGlobalStyle`
+export const ResetCss = createGlobalStyle`
   body {
     background-color: black;
     color: white;
