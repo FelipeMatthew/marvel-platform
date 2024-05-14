@@ -35,7 +35,7 @@ export const marvelTheme = () => ({
       contrast: "#FF6D00",
       1: "#fafafa",
       2: "#f5f5f5",
-      3: "eeeeee",
+      3: "#eeeeee",
       dark: "#000",
       white: "#FFF",
       inverse: "#000",
