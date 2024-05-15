@@ -1,7 +1,12 @@
+import Header from "../../components/Header";
 
 const MoviesPage = () => {
   return (
-    <h1>Movies Page</h1>
+    <div>
+            <Header currentPage="/movies"/>
+
+            <h1>Movies Page</h1>
+    </div>
   )
 }
 

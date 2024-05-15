@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 const CharactersPage = () => {
   return (
     <div>
-      <Header />
+      <Header currentPage="/characters"/>
       <h1>Characters Page</h1>
     </div>
   )

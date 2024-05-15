@@ -58,6 +58,14 @@ export const Flex = styled.div`
 `;
 
 export const Button = styled.button`
+  
+`;
+
+export const Join = styled(Link)`
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
   background-color: #FF0000;
   font-size: 1.5625rem;
   padding: 1.25rem;
@@ -65,11 +73,6 @@ export const Button = styled.button`
   font-weight: 500;
 
   border: none;
-`;
-
-export const Join = styled(Link)`
-  text-decoration: none;
-  color: #fff;
 `;
 
 export const Label = styled.label`

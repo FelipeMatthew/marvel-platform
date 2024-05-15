@@ -1,24 +1,41 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logoImage from '../../assets/images/logo.png';
-import userImage from '../../assets/images/user.png'
+import userImage from '../../assets/images/user.png';
+import * as S from './styled';
 
-import * as S from './styled'
+export type HeaderProps = {
+  currentPage: '/characters' | '/movies' | '/hqs';
+};
 
-const Header = () => {
+const Header = ({ currentPage }: HeaderProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <S.HeaderContainer>
-      <S.Logo src={logoImage} alt="Logo" />
-      <S.Nav>
-        <S.NavLink to="/characters">Personagens</S.NavLink>
-        <S.NavLink to="/movies">Filmes</S.NavLink>
-        <S.NavLink to="/hqs">HQs</S.NavLink>
-      </S.Nav>
-      <div>
-        <S.Avatar src={userImage} alt="Avatar" />
-        <S.Button>Sair</S.Button>
-      </div>
+      <Link to='/characters'>
+        <S.Logo src={logoImage} alt="Logo" />
+      </Link>
+      <S.MenuIcon onClick={toggleMenu}>
+        <div>&#9776;</div>
+      </S.MenuIcon>
+      <S.NavMenu isOpen={isMenuOpen}>
+        <S.NavLink currentPage={currentPage} to="/characters">Personagens</S.NavLink>
+        <S.NavLink currentPage={currentPage} to="/movies">Filmes</S.NavLink>
+        <S.NavLink currentPage={currentPage} to="/hqs">HQs</S.NavLink>
+        <S.UserContainer>
+          <S.Avatar src={userImage} alt="Avatar" />
+          <Link to='/login'>
+            <S.Button>Sair</S.Button>
+          </Link>
+        </S.UserContainer>
+      </S.NavMenu>
     </S.HeaderContainer>
-
   );
-}
+};
 
 export default Header;

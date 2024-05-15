@@ -25,7 +25,7 @@ const LoginPage = () => {
             <S.ForgotPass to='/hqs'>Esqueci a senha</S.ForgotPass>      
           </S.Flex>
 
-          <S.Button type="submit"><S.Join to='/characters'>Entrar</S.Join></S.Button>
+          <S.Join to='/characters'>Entrar</S.Join>
 
           <S.SignupMessage>
             Ainda não tem login? 
