@@ -6,8 +6,8 @@ export const ResetCss = createGlobalStyle`
     font-family: 'KastelovAxiforma', sans-serif;
     background-color: #000;
     color: #fff;
-    height: 1920px;
-    width: 1200px;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0; 
     overflow: hidden;
