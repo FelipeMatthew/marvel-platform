@@ -10,7 +10,6 @@ export const ResetCss = createGlobalStyle`
     width: 100vw;
     margin: 0;
     padding: 0; 
-    overflow: hidden;
   }
 
   @media (min-width: 768px) {
