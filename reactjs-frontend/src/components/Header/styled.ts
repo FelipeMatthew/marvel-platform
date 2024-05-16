@@ -14,6 +14,7 @@ export const HeaderContainer = styled.div`
   color: #fff;
   border-bottom: red 4px solid;
   font-weight: bold;
+
 `;
 
 export const Logo = styled.img`
@@ -45,10 +46,7 @@ export const Avatar = styled.img`
 `;
 
 
-export const LogOut = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-`;
+
 
 export const Button = styled.button`
   background-color: #ff0000;
@@ -57,6 +55,7 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   font-size: 20px;
+  color: #fff;
 `;
 
 export const UserContainer = styled.div`

@@ -5,4 +5,5 @@ export const CarouselContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 20px;
 `;

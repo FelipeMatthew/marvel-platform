@@ -3,12 +3,15 @@ import logoImage from '../../assets/images/logo.png';
 import userImage from '../../assets/images/user.png'
 
 import * as S from './styled'
+import { useState } from 'react';
 
 export type HeaderProps = {
   currentPage?: '/characters' | '/movies' | '/hqs';
 }
 
 const Header = ({ currentPage } : HeaderProps) => {
+
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <S.HeaderContainer>
@@ -22,9 +25,9 @@ const Header = ({ currentPage } : HeaderProps) => {
       </S.Nav>
       <S.UserContainer>
         <S.Avatar src={userImage} alt="Avatar" />
-      <Link to='/characters'>
+      <Link to='/login'>
         <S.Button>
-          <S.LogOut to='/'>Sair</S.LogOut>
+          Sair
         </S.Button>
       </Link>
       </S.UserContainer>
