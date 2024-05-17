@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div<{ imageUrl: string }>`
   background-image: url(${props => props.imageUrl});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   position: relative;
-  width: 290px;
-  height: 480px;
+  width: 18.125rem;
+  height: 30rem;
   padding: 1.7rem;
-  border-radius: 40px;
+  border-radius: 2.5rem;
 `;
 
 export const ContentContainer = styled.div`
@@ -19,22 +17,20 @@ export const ContentContainer = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 270px;
-  border-radius: 40px;
+  height: 16.875rem;
+  border-radius: 2.5rem;
   background: rgb(180,58,58);
   background: linear-gradient(180deg, rgba(180,58,58,1) 0%, rgba(252,69,69,0.5690651260504201) 100%);
 
   h1 {
     position: absolute;
     top: 1rem;
-    font-size: 26px;
+    font-size: 1.625rem;
   }
-
 `;  
 
 export const Content = styled.p`
@@ -50,6 +46,6 @@ export const Details = styled.button`
   bottom: 1rem;
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.8);
 `;
