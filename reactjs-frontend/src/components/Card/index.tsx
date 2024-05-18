@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 export type CardProps = {
   image: string,
@@ -9,16 +9,30 @@ export type CardProps = {
 }
 
 const Card: FC<CardProps> = ({ image, title, content}) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+
   return (
-    <S.Container imageUrl={image}>
+    <>
+      {/* Card */}
+      <S.Container imageUrl={image} onClick={openModal}>
+        <S.ContentContainer>     
+            <h1>{title}</h1>
+            <S.Content>{content}</S.Content>
+          <S.Details>Ver detalhes</S.Details> 
+        </S.ContentContainer>
+      </S.Container>
 
-      <S.ContentContainer>     
-          <h1>{title}</h1>
-          <S.Content>{content}</S.Content>
-        <S.Details>Ver detalhes</S.Details> 
-      </S.ContentContainer>
-
-    </S.Container>
+      {/* Modal */}
+    </>
   )
 }
 

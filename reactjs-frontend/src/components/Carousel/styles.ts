@@ -21,11 +21,9 @@ export const CustomArrow = styled.div`
   &::before {
     content: '';
     border: solid red;
-    border-width: 0 0.15vw 0.15vw 0;
-    border-width: 0 0.15em 0.15em 0; /* Também pode usar 'em' para proporção relativa */
+    border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 1vw; /* Alterado para usar porcentagem */
-    padding: 1em;
+    padding: 10px;
   }
 `;
 
