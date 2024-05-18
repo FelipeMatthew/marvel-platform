@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-export const CarouselContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
+export const Container = styled.div`
+  width: 100%;
+`;
+
+
+
+
+export const CardWrapper = styled.div`
+  padding: 0 10px; // adiciona espaçamento entre os cards
 `;

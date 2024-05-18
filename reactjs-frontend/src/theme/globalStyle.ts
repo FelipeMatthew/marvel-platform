@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const ResetCss = createGlobalStyle`
   html,
   body {
     font-family: 'KastelovAxiforma', sans-serif;
-    background-color: #000;
     color: #fff;
     height: 100vh;
     width: 100vw;
