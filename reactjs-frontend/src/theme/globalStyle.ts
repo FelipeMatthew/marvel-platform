@@ -6,10 +6,10 @@ export const ResetCss = createGlobalStyle`
   html,
   body {
     font-family: axiforma;
-    background-color: black;
-    color: #fff;
-    height: 100vh;
-    width: 100vw;
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0; 
   }

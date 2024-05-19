@@ -9,7 +9,8 @@ export const theme = {
     small: "0.875rem", // 14px
     medium: "1rem", // 16px
     large: "1.25rem", // 20px
-    xl: "2rem", // 32px
+    xl: "1.5rem", // 24px
+    xxl: "1.75rem", // 28px
   },
   spacings: {
     small: "0.5rem", // 8px

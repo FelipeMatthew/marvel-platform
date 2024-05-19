@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { theme } from "../../theme";
+
+import bgImage from '../../assets/images/background-picture.png'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 10rem;
   height: 100vh;
-  gap: 1.5rem;
 `;
 
 export const LogoImage = styled.img`
@@ -16,14 +19,14 @@ export const LogoImage = styled.img`
 `;
 
 export const WelcomeText = styled.h1`
-  color: #FF0000;
+  color: ${theme.colors.details};
   letter-spacing: 1.1px;
   margin-bottom: -0.625rem;
 `;
 
 export const AccessText = styled.p`
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.25rem;
+  color: ${theme.colors.accentLight};
+  font-size: ${theme.fontSizes.large};
   margin-bottom: -0.625rem;
 `;
 
@@ -36,14 +39,14 @@ export const Input = styled.input`
   height: 3.75rem;
   width: 25rem;
   border-radius: 2.5rem;
-  margin-top: 0.9375rem;
-  font-size: 1.25rem;
-  padding-left: 1.875rem;
+  margin-top: ${theme.spacings.medium};
+  font-size: ${theme.fontSizes.large};
+  padding-left: ${theme.spacings.medium};
 
-  border: 1px solid #ccc;
+  border: 1px solid ${theme.colors.accentLight};
 
   &:focus {
-    border-color: #FF0000; 
+    border-color: ${theme.colors.details}; 
     outline: none;
   }
 
@@ -53,7 +56,7 @@ export const Input = styled.input`
 export const Flex = styled.div`
   display: flex; 
   justify-content: space-between;
-  padding: 1.875rem;
+  padding: ${theme.spacings.medium};
   align-items: center;
 `;
 
@@ -65,38 +68,47 @@ export const Join = styled(Link)`
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: #fff;
-  background-color: #FF0000;
-  font-size: 1.5625rem;
-  padding: 1.25rem;
-  border-radius: 3.125rem;
+  color: ${theme.colors.text};
+  background-color: ${theme.colors.details};
+  font-size: ${theme.fontSizes.xxl};
+  padding: ${theme.spacings.medium};
+  border-radius: 2.5rem;
   font-weight: 500;
 
   border: none;
 `;
 
 export const Label = styled.label`
-   color: rgba(255, 255, 255, 0.5);
+   color: ${theme.colors.accentLight};
 `;
 
 export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
-  	accent-color: #FF0000;
+  	accent-color: ${theme.colors.details};
 `;
 
 export const ForgotPass = styled(Link)`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${theme.colors.accentLight};
   text-decoration: none;
-  border-bottom: solid 0.0625rem #FF0000;
+  border-bottom: solid 0.0625rem ${theme.colors.details};
 `;
 
 export const SignupMessage = styled.div`
   display: flex;
-  margin-top: 1.25rem;
+  margin-top: ${theme.spacings.medium};
   justify-content: center;
 `;
 
 export const Register = styled(Link)`
   margin-left: 0.4375rem;
-  color: #FF0000;
+  color: ${theme.colors.details};
   text-decoration: none;
+`;
+
+export const BackgroundImage = styled.div`
+position: relative;
+  width: 50%; /* Largura da div com a imagem de fundo */
+  height: 100%;
+  background-image: url(${bgImage});
+  background-size: cover;
+  background-position: right;
 `;

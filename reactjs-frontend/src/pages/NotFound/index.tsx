@@ -1,18 +1,15 @@
-import styled from 'styled-components';
-
-import testing from '../../assets/images/background-picture.png'
+import * as S from './style'
 
 const NotFoundPage = () => {
   return (
-    <Testing>
-      <h1>Not Found Page</h1>
-    </Testing>
+    <S.Container>
+      <h1>Erro 404</h1>
+      <h2>Page não encontrada</h2>
+      <p>Volte para ver seus super heróis</p>
+      
+      <S.Button to='/'>Voltar</S.Button>
+    </S.Container>
   )
 }
-
-const Testing = styled.div`
-  color: red;
-  background-color: ${ testing } transparent;
-`;
 
 export default NotFoundPage;
