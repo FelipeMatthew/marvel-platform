@@ -3,6 +3,7 @@ import * as S from './styles'
 import { Link } from 'react-router-dom';
 
 import userImage from '../../assets/images/user.png'
+import { FC } from 'react';
 
 type MenuMobileProps = {
   menuIsVisible: boolean;
@@ -10,7 +11,7 @@ type MenuMobileProps = {
   currentPage: string
 }
 
-const MenuMobile = ({ menuIsVisible, setMenuIsVisible, currentPage } : MenuMobileProps) => {
+const MenuMobile: FC<MenuMobileProps> = ({ menuIsVisible, setMenuIsVisible, currentPage }) => {
   return (
     <S.Container isVisible={menuIsVisible}>
       <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>

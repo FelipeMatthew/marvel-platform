@@ -6,13 +6,14 @@ import userImage from '../../assets/images/user.png'
 import * as S from './styled'
 
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { FC } from 'react';
 
 export type HeaderProps = {
   currentPage?: '/characters' | '/movies' | '/hqs';
   setMenuIsVisible: (isVisible: boolean) => void;
 }
 
-const Header = ({ currentPage, setMenuIsVisible } : HeaderProps) => {
+const Header: FC<HeaderProps> = ({ currentPage, setMenuIsVisible }) => {
 
   return (
     <S.HeaderContainer>

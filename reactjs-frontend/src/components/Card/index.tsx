@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import * as S from './styles';
 import Modal from '../Modal';
+import CustomModal from '../Modal';
 
 export type CardProps = {
   image: string;
@@ -9,19 +10,14 @@ export type CardProps = {
 };
 
 const Card: FC<CardProps> = ({ image, title, content }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <>
-      <S.Container imageUrl={image} onClick={openModal}>
+      <S.Container imageUrl={image} onClick={handleOpen}>
         <S.ContentContainer>
           <h1>{title}</h1>
           <S.Content>{content}</S.Content>
@@ -29,10 +25,10 @@ const Card: FC<CardProps> = ({ image, title, content }) => {
         </S.ContentContainer>
       </S.Container>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h1>{title}</h1>
-        <p>{content}</p>
-      </Modal>
+      <CustomModal 
+          open={open}
+          onClose={handleClose}
+        />
     </>
   );
 };

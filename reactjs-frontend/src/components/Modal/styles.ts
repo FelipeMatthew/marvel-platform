@@ -1,33 +1,16 @@
+import { Box } from "@mui/material";
 import styled from "styled-components";
 
-export const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-`;
-
-export const ModalContent = styled.div`
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  z-index: 1001;
-`;
-
-export const CloseButton = styled.button`
-  background: red;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
-  border-radius: 5px;
+export const StyledBox = styled(Box)`
+color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: blue;
+  border: 2px solid #000;
+  box-shadow: 24px;
+  padding: 16px;
+  border-radius: 8px;
 `;

@@ -1,32 +1,33 @@
-import React, { FC, useEffect } from 'react';
+// src/components/CustomModal.tsx
+import React, { ReactElement } from 'react';
+import { Modal} from '@mui/material';
 
 import * as S from './styles'
+import { IoMdCloseCircleOutline } from 'react-icons/io';
 
-type ModalProps = {
-  isOpen: boolean;
+type CustomModalProps = {
+  open: boolean;
   onClose: () => void;
-  children: React.ReactNode;
+  children: ReactElement;
 };
 
-const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpen]);
-
-  if (!isOpen) return null;
-
+const CustomModal: React.FC<CustomModalProps> = ({ open, onClose, children }) => {
   return (
-    <S.Overlay onClick={onClose}>
-      <S.ModalContent onClick={(e) => e.stopPropagation()}>
-        {children}
-        <S.CloseButton onClick={onClose}>Fechar</S.CloseButton>
-      </S.ModalContent>
-    </S.Overlay>
+    <Modal
+      open={open}
+      onClose={onClose}
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
+      <S.StyledBox>
+          {children}
+          <IoMdCloseCircleOutline 
+          size={45}
+          onClick={onClose}
+        />
+      </S.StyledBox>
+    </Modal>
   );
 };
 
-export default Modal;
+export default CustomModal;
