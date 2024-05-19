@@ -6,14 +6,14 @@ import userImage from '../../assets/images/user.png'
 
 type MenuMobileProps = {
   menuIsVisible: boolean;
-  setMenuIsVisible: boolean;
+  setMenuIsVisible: (isVisible: boolean) => void;
   currentPage: string
 }
 
-const MenuMobile = ({ menuIsVisible, setMenuIsVisible, currentPage }) => {
+const MenuMobile = ({ menuIsVisible, setMenuIsVisible, currentPage } : MenuMobileProps) => {
   return (
     <S.Container isVisible={menuIsVisible}>
-      <IoClose size={45} onClick={() => setMenuIsVisible()}/>
+      <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>
       <S.Nav>
         <S.NavLink currentPage={currentPage} to="/characters">Personagens</S.NavLink>
         <S.NavLink currentPage={currentPage} to="/movies">Filmes</S.NavLink>

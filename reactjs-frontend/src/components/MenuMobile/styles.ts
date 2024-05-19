@@ -18,7 +18,6 @@ export const Container = styled.div<{ isVisible: boolean }>`
   justify-content: center;
 
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,0.7931547619047619) 12%, rgba(0,0,0,0.927608543417367) 25%);
 
   opacity: 0;
   pointer-events: none;

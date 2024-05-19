@@ -9,6 +9,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 export type HeaderProps = {
   currentPage?: '/characters' | '/movies' | '/hqs';
+  setMenuIsVisible: (isVisible: boolean) => void;
 }
 
 const Header = ({ currentPage, setMenuIsVisible } : HeaderProps) => {

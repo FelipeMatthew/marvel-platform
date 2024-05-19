@@ -7,7 +7,9 @@ const LoginPage = () => {
     <>
       <S.BackgroundImage />
       <S.Container>
-        <S.LogoImage src={logoPicture} alt="Logo Image" />
+        <S.ImgContainer>
+          <img src={logoPicture} alt="Logo Image" />
+        </S.ImgContainer>
 
         <div>
           <S.WelcomeText>Bem vindo(a) de volta!</S.WelcomeText>

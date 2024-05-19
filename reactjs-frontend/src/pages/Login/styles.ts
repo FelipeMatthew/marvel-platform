@@ -7,16 +7,31 @@ import bgImage from '../../assets/images/background-picture.png'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-left: 10rem;
   height: 100vh;
+
+
+  @media(max-width: 900px) {
+      max-width: 100%;
+      align-items: center;
+      margin-left: 0;
+    }
 `;
 
-export const LogoImage = styled.img`
-  height: 9.375rem;
-  width: 18.75rem;
+export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 400px; 
+
+  img { 
+    height: 9.375rem;
+    width: 18.75rem;
+  }
 `;
+
+
 
 export const WelcomeText = styled.h1`
   color: ${theme.colors.details};
