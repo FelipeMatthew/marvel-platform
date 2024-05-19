@@ -1,67 +1,31 @@
-export const marvelTheme = () => ({
+export const theme = {
   colors: {
-    background: "#0f172a",
-    dark: {
-      pure: "#1e293b",
-      1: "#334155",
-      2: "#475569",
-      3: "#64748b",
-    },
-    light: {
-      pure: "#ffffff",
-      1: "#efeff1",
-      2: "#e5e5e5",
-      3: "#eaeaea",
-    },
-    neutral: {
-      pure: "#1e293b",
-      1: "#334155",
-      2: "#475569",
-      3: "#64748b",
-    },
-    primary: "#FF0000",
-    secondary: "#FFD700", 
-    feedback: {
-      error: "#FF0000", 
-      warning: "#FFD700", 
-      success: "#007e33", 
-      info: "#0d47a1",
-    },
+    text: "#FFFFFF",
+    background: "#000000",
+    details: "#FF0000",
+    accentLight: "rgba(255, 255, 255, 0.5)",
   },
-  font: {
-    family: 'Kastelov - Axiforma Regular, sans-serif',
-    src: `url(${'../assets/fonts/Kastelov  Axiforma Regular.woff'}) format('wolf')`, 
-    colors: {
-      contrast: "#FF6D00",
-      1: "#fafafa",
-      2: "#f5f5f5",
-      3: "#eeeeee",
-      dark: "#000",
-      white: "#FFF",
-      inverse: "#000",
-      pure: "#FFF",
-    },
+  fontSizes: {
+    small: "0.875rem", // 14px
+    medium: "1rem", // 16px
+    large: "1.25rem", // 20px
+    xl: "2rem", // 32px
   },
-  breakpoints: {
-    xsm: "360px",
-    sm: "576px",
-    md: "768px",
-    lg: "992px",
-    xl: "1350px",
+  spacings: {
+    small: "0.5rem", // 8px
+    medium: "1rem", // 16px
+    large: "2rem", // 32px
   },
-  transitions: {
-    time: "0.3s",
-    type: "ease",
+  radius: {
+    small: "4px",
+    medium: "8px",
+    large: "16px",
   },
-  spacing: {
-    xxxs: "4px",
-    xxs: "8px",
-    xs: "16px",
-    sm: "24px",
-    md: "32px",
-    lg: "40px",
-    xl: "48px",
-    xxl: "56px",
-    xxxl: "64px",
+  shadows: {
+    small: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    medium: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+    large: "0px 8px 16px rgba(0, 0, 0, 0.1)",
   },
-});
+};
+
+export default theme;

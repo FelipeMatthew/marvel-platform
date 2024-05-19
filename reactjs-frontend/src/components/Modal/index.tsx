@@ -1,26 +1,32 @@
-import { ReactElement, FC } from 'react'
+import React, { FC, useEffect } from 'react';
+
 import * as S from './styles'
 
 type ModalProps = {
-  isOpen: boolean,
-  onClose: () => void,
-  children: ReactElement |  ReactElement[]
-
-}
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+};
 
 const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  if(!isOpen) {
-    return null;
-  }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
-    <S.Overlay onClick={onclose}>
-      <h1>working on modal</h1>
-
+    <S.Overlay onClick={onClose}>
+      <S.ModalContent onClick={(e) => e.stopPropagation()}>
+        {children}
+        <S.CloseButton onClick={onClose}>Fechar</S.CloseButton>
+      </S.ModalContent>
     </S.Overlay>
+  );
+};
 
-  )
-
-}
-
-export default Modal
+export default Modal;

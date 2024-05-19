@@ -6,7 +6,7 @@ type NavLinkProps = Pick<HeaderProps, 'currentPage'>
 
 export const HeaderContainer = styled.div`
   display: flex;
-  width:100%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;

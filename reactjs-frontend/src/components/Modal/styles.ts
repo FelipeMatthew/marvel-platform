@@ -19,4 +19,15 @@ export const ModalContent = styled.div`
   border-radius: 10px;
   max-width: 500px;
   width: 100%;
+  z-index: 1001;
+`;
+
+export const CloseButton = styled.button`
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 5px;
 `;

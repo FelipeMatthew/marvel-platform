@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div<{ imageUrl: string }>`
   background-image: url(${props => props.imageUrl});
@@ -10,6 +10,7 @@ export const Container = styled.div<{ imageUrl: string }>`
   height: 30rem;
   padding: 1.7rem;
   border-radius: 2.5rem;
+  cursor: pointer; /* Indica que é clicável */
 `;
 
 export const ContentContainer = styled.div`

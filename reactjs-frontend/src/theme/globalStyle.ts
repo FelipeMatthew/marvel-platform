@@ -1,10 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
+import axiformaFont from '../assets/fonts/Kastelov  Axiforma Regular.woff';
 
 export const ResetCss = createGlobalStyle`
   html,
   body {
-    font-family: 'KastelovAxiforma', sans-serif;
+    font-family: axiforma;
+    background-color: black;
     color: #fff;
     height: 100vh;
     width: 100vw;
@@ -12,26 +14,9 @@ export const ResetCss = createGlobalStyle`
     padding: 0; 
   }
 
-  @media (min-width: 768px) {
-  body {
-    background-color: #000;
+  @font-face {
+    font-family: axiforma;
+    src: url('${axiformaFont}');
   }
-  
-  .container {
-    width: 960px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    background-color: #000;
-  }
-  
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
 `;
 

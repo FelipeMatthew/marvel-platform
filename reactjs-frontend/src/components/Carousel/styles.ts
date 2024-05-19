@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 3rem auto;
   padding: 0 60px; 
   position: relative;
+  width: 1400px;
 `;
 
 export const CustomArrow = styled.div`
