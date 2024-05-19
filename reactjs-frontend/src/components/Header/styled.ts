@@ -15,6 +15,23 @@ export const HeaderContainer = styled.div`
   border-bottom: red 4px solid;
   font-weight: bold;
 
+  .mobile { 
+    display: none;
+  }
+
+  > svg { 
+    margin-right: 2rem;
+  }
+
+  @media(max-width: 900px) {
+      .mobile {
+        display: initial;
+      }
+      > nav {
+        display: none;
+      }
+    }
+
 `;
 
 export const Logo = styled.img`
@@ -27,6 +44,8 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 60px;
+
+  
 `;
 
 export const NavLink = styled(Link)<NavLinkProps>`
@@ -63,4 +82,8 @@ export const UserContainer = styled.div`
   align-items: center;
   margin-right: 30px;
   gap: 20px;
+
+  @media(max-width: 900px) {
+      display: none;
+    }
 `;

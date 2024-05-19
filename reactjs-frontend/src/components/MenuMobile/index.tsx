@@ -1,28 +1,25 @@
+import { IoClose } from 'react-icons/io5';
+import * as S from './styles'
 import { Link } from 'react-router-dom';
 
-import logoImage from '../../assets/images/logo.png';
 import userImage from '../../assets/images/user.png'
 
-import * as S from './styled'
-
-import { GiHamburgerMenu } from 'react-icons/gi';
-
-export type HeaderProps = {
-  currentPage?: '/characters' | '/movies' | '/hqs';
+type MenuMobileProps = {
+  menuIsVisible: boolean;
+  setMenuIsVisible: boolean;
+  currentPage: string
 }
 
-const Header = ({ currentPage, setMenuIsVisible } : HeaderProps) => {
-
+const MenuMobile = ({ menuIsVisible, setMenuIsVisible, currentPage }) => {
   return (
-    <S.HeaderContainer>
-      <Link to='/characters'>
-        <S.Logo src={logoImage} alt="Logo" />
-      </Link>
+    <S.Container isVisible={menuIsVisible}>
+      <IoClose size={45} onClick={() => setMenuIsVisible()}/>
       <S.Nav>
         <S.NavLink currentPage={currentPage} to="/characters">Personagens</S.NavLink>
         <S.NavLink currentPage={currentPage} to="/movies">Filmes</S.NavLink>
         <S.NavLink currentPage={currentPage} to="/hqs">HQs</S.NavLink>
       </S.Nav>
+      
       <S.UserContainer>
         <S.Avatar src={userImage} alt="Avatar" />
       <Link to='/login'>
@@ -31,10 +28,8 @@ const Header = ({ currentPage, setMenuIsVisible } : HeaderProps) => {
         </S.Button>
       </Link>
       </S.UserContainer>
-      <GiHamburgerMenu size={45} onClick={() => setMenuIsVisible(true)} className='mobile'/>
-    </S.HeaderContainer>
-
-  );
+    </S.Container>
+  )
 }
 
-export default Header;
+export default MenuMobile;

@@ -28,14 +28,3 @@ export const CustomArrow = styled.div`
   }
 `;
 
-export const NextArrow = styled(CustomArrow)`
-  position: absolute;
-  right: -2%;
-  transform: rotate(-45deg);
-`;
-
-export const PrevArrow = styled(CustomArrow)`
-  position: absolute;
-  left: -10.5%;
-  transform: rotate(135deg);
-`;
