@@ -33,3 +33,18 @@ export const CustomArrow = styled.div`
   }
 `;
 
+export const PrevArrow = styled(CustomArrow)`
+  left: -60px;
+
+  &::before {
+    transform: rotate(135deg);
+  }
+`;
+
+export const NextArrow = styled(CustomArrow)`
+  right: -60px;
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+`;
