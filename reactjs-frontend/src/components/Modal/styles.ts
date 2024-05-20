@@ -28,17 +28,21 @@ export const Img = styled.img`
   margin: -17px;
   border-radius: 25px;
   height: 600px;
-  width: 40%;
+  width: 45%;
+
+  @media (max-width: 900px) {
+      display: none;
+    }
 `;
 
 export const ContentContainer = styled.div`
 
   h1 { 
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   div {
@@ -47,11 +51,10 @@ export const ContentContainer = styled.div`
     justify-content: flex-end;
 
     h3 {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
-
     p {
-      font: 1.5rem;
+      font-size: 2rem;
     }
   }
   

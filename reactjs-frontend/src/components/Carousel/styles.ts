@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 60%;
+  max-width: 70%;
   margin: 3rem auto;
   padding: 0 60px; 
   position: relative;
   width: 1400px;
+
+  @media (min-width: 729px) {
+    padding: 0;
+    width : 90%;
+    }
 `;
 
 export const CustomArrow = styled.div`
