@@ -5,7 +5,6 @@ import * as S from './styles'
 const LoginPage = () => {
   return (
     <>
-      <S.BackgroundImage />
       <S.Container>
         <S.ImgContainer>
           <img src={logoPicture} alt="Logo Image" />
@@ -26,14 +25,14 @@ const LoginPage = () => {
                 Salvar login
               </S.Label>
                 
-              <S.ForgotPass to='/hqs'>Esqueci a senha</S.ForgotPass>      
+              <S.ForgotPass to='/'>Esqueci a senha</S.ForgotPass>      
             </S.Flex>
 
             <S.Join to='/characters'>Entrar</S.Join>
 
             <S.SignupMessage>
               Ainda não tem login? 
-              <S.Register to='/hqs'>Cadastre-se</S.Register>
+              <S.Register to='/'>Cadastre-se</S.Register>
             </S.SignupMessage>
         </S.Form>
       </S.Container>

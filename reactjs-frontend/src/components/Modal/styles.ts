@@ -11,10 +11,13 @@ export const StyledBox = styled(Box)`
   transform: translate(-50%, -50%);
 
   color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.details};
   box-shadow: 24px;
   padding: 16px;
   border-radius: 24px;
+
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,0.6755077030812324) 75%, rgba(106,0,0,0.9248074229691877) 97%); 
+
 
   .icon {
     position: absolute;

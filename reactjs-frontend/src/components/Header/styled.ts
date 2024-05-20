@@ -31,7 +31,8 @@ export const HeaderContainer = styled.div`
         display: none;
       }
     }
-
+  
+  
 `;
 
 export const Logo = styled.img`
@@ -44,7 +45,11 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 60px;
-
+  
+  :hover { 
+    color: red;
+    transition: ease-in-out 1s ;
+  }
   
 `;
 

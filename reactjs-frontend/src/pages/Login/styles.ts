@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme";
 
-import bgImage from '../../assets/images/background-picture.png'
 
 export const Container = styled.div`
   display: flex;
@@ -118,11 +117,3 @@ export const Register = styled(Link)`
   text-decoration: none;
 `;
 
-export const BackgroundImage = styled.div`
-position: relative;
-  width: 50%; /* Largura da div com a imagem de fundo */
-  height: 100%;
-  background-image: url(${bgImage});
-  background-size: cover;
-  background-position: right;
-`;
