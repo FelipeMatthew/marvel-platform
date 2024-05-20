@@ -1,15 +1,19 @@
 import React, { FC, useState } from 'react';
 import * as S from './styles';
-import Modal from '../Modal';
-import CustomModal from '../Modal';
+
+import MyModal from '../Modal';
 
 export type CardProps = {
   image: string;
   title: string;
   content: string;
+  modal: {
+    presentIn: string
+  }
+  
 };
 
-const Card: FC<CardProps> = ({ image, title, content }) => {
+const Card: FC<CardProps> = ({ image, title, content, modal }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
@@ -25,10 +29,15 @@ const Card: FC<CardProps> = ({ image, title, content }) => {
         </S.ContentContainer>
       </S.Container>
 
-      <CustomModal 
+      <MyModal 
           open={open}
           onClose={handleClose}
+          image={image}
+          title={title}
+          content={modal.presentIn}
+          rating='★★★★★★'
         />
+
     </>
   );
 };

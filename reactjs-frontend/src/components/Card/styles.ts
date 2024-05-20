@@ -29,8 +29,12 @@ export const ContentContainer = styled.div`
 
   h1 {
     position: absolute;
-    top: 1rem;
-    font-size: 1.625rem;
+    top: 0.3rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: .9rem;
   }
 `;  
 
@@ -49,4 +53,25 @@ export const Details = styled.button`
   border: none;
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.8);
+`;
+
+// Modal
+
+export const ModalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: none;
+  img {
+    height: 500px;
+    width: 60%;
+    border-radius: 25px;
+  }
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
 `;

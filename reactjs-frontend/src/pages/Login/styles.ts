@@ -89,7 +89,6 @@ export const Join = styled(Link)`
   padding: ${theme.spacings.medium};
   border-radius: 2.5rem;
   font-weight: 500;
-
   border: none;
 `;
 

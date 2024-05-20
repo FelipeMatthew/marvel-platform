@@ -3,29 +3,40 @@ import spiderManPicture from '../../assets/images/characters/spider-man.jpeg'
 import thanosPicture from '../../assets/images/characters/thanos.jpeg'
 import hulkPicture from '../../assets/images/characters/hulk.jpeg'
 
-import { CardProps } from '../../components/Card'
 
 
-export const wandaCard: CardProps = {
+export const wandaCard = {
     image: wandaPicture,
     title: 'Wanda Maximoff',
-    content: 'Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.' 
+    content: 'Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.',
+    modal: {
+      presentIn: "Aparições: <br> Vingadores - Era de Ultron Capitão América - Guerra Civil Vingadores - Guerra Infinita Vingadores - Ultimato WandaVision"
+    }
 }
 
-export const spiderManCard: CardProps = {
+export const spiderManCard = {
   image: spiderManPicture,
   title: 'Spider Man',
-  content: 'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.' 
+  content: 'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.',
+  modal: {
+    presentIn: "Aparições: <br> Vingadores - Era de Ultron Capitão América - Guerra Civil Vingadores - Guerra Infinita Vingadores - Ultimato WandaVision"
+  } 
 }
 
-export const thanosCard: CardProps = {
+export const thanosCard = {
   image: thanosPicture,
   title: 'Thanos',
   content: "A lua Titã era governa'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais.", 
+  modal: {
+    presentIn: "Aparições: <br/> Vingadores - Era de Ultron Capitão América - Guerra Civil Vingadores - Guerra Infinita Vingadores - Ultimato WandaVision"
+  }
 }
 
-export const hulkCard: CardProps = {
+export const hulkCard = {
   image: hulkPicture,
   title: 'Hulk',
-  content: 'Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.' 
+  content: 'Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.' ,
+  modal: {
+    presentIn: "Aparições: <br> Vingadores - Era de Ultron Capitão América - Guerra Civil Vingadores - Guerra Infinita Vingadores - Ultimato WandaVision"
+  }
 }
